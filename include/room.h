@@ -17,6 +17,7 @@ public:
     int getHeight();
     int getEscapeX();
     int getEscapeY();
+    Room* getExit(std::string direction);
 
 private:
     int width;

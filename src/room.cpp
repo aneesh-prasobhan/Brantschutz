@@ -52,3 +52,7 @@ int Room::getEscapeY()
 {
     return escapeY;
 }
+
+Room* Room::getExit(std::string direction) {
+    return exits[direction];
+}

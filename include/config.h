@@ -9,5 +9,6 @@
 #define MIN_ROOM 10
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
+#define EXIT_THICKNESS 5
 
 #endif

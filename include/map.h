@@ -17,12 +17,15 @@ public:
         Room*** getRooms();
     int getEscapeX(int floor, int room);
     int getEscapeY(int floor, int room);
+    void setCurrentFloor(int floor) { currentFloor = floor; }
 
 
 private:
     int numFloors;
     int numRoomsPerFloor;
     Room*** rooms;
+    int currentFloor;
+
 };
 
 #endif
