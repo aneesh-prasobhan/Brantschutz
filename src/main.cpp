@@ -1,7 +1,7 @@
 #include "config.h"
 #include "input.h"
 #include "map.h"
-#include "math.h"
+#include "../include/math.h"
 #include "output.h"
 
 int main()

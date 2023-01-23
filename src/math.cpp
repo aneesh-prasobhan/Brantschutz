@@ -1,4 +1,4 @@
-#include "math.h"
+#include "../include/math.h"
 #include <cmath>
 
 int getDistance(int x1, int y1, int x2, int y2)
