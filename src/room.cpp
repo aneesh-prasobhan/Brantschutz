@@ -1,12 +1,15 @@
 #include "room.h"
-#include <string>
 
-Room::Room(int width, int height, int floor, int roomNumber) : roomNumber(roomNumber), escapeX(-1), escapeY(-1)
+Room::Room(int x, int y) : escapeX(-1), escapeY(-1)
 {
-    this->width = width;
-    this->height = height;
-    this->floor = floor;
+    this->x = x;
+    this->y = y;
     onFire = false;
+}
+
+void Room::addExit(std::string direction, Room* neighbor)
+{
+    exits[direction] = neighbor;
 }
 
 void Room::setExit(std::string direction, Room* neighbor)
@@ -24,35 +27,14 @@ bool Room::isOnFire()
     return onFire;
 }
 
-int Room::getFloor()
+std::map<std::string, Room*> Room::getExits()
 {
-    return floor;
+    return exits;
 }
 
-int Room::getRoomNumber()
-{
-    return roomNumber;
-}
-
-int Room::getWidth()
-{
-    return width;
-}
-
-int Room::getHeight()
-{
-    return height;
-}
-
-int Room::getEscapeX()
-{
+int Room::getEscapeX() {
     return escapeX;
 }
-int Room::getEscapeY()
-{
+int Room::getEscapeY() {
     return escapeY;
-}
-
-Room* Room::getExit(std::string direction) {
-    return exits[direction];
 }

@@ -6,22 +6,13 @@
 
 int main()
 {
-    Map* map = new Map(NUM_FLOORS, NUM_ROOMS_PER_FLOOR, ROOM_WIDTH, ROOM_HEIGHT);
+    // Initialize the map
+    Map map;
+    map.setCurrentFloor(0);
+    map.initialize();
 
-    //set exits between rooms
-    //example: map->setExit(0, 0, "north", 1, 0);
-
-    //set rooms on fire
-    //example: map->setRoomOnFire(2, 3);
-
-    //find quickest exit
-    map->findQuickestExit();
-
-    //draw map on screen using SFML
-    map->drawMap();
-
-    //clean up memory
-    delete map;
+    // Draw the map
+    map.drawMap();
 
     return 0;
 }
